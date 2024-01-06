@@ -1,0 +1,25 @@
+<section >
+
+  <button routerLink="/">Zurück</button>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h3>Login</h3>
+
+    <div>
+      <label for="username">Benutzername:</label>
+      <input type="text" id="username" formControlName="username">
+    </div>
+
+    <div>
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+
+    <div class="buttons">
+      <button type="submit" [disabled]="form.invalid">Einloggen</button>
+      <button type="reset" (click)="reset()">Reset</button>
+    </div>
+
+  </form>
+
+</section>

@@ -1,0 +1,35 @@
+<section class="main">
+
+  <button routerLink="/">Zurück</button>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h3>Registrieren</h3>
+
+    <div>
+      <label for="username">Vorname:</label>
+      <input type="text" id="vorname" formControlName="firstName">
+    </div>
+
+    <div>
+      <label for="username">Nachname:</label>
+      <input type="text" id="nachname" formControlName="lastName">
+    </div>
+
+    <div>
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+
+    <div>
+      <label for="passwordConfirm">Passwort bestätigen:</label>
+      <input type="password" id="passwordConfirm" formControlName="passwordConfirm">
+    </div>
+
+    <div class="buttons">
+      <button type="submit" [disabled]="form.invalid">Einloggen</button>
+      <button type="reset" (click)="reset()">Reset</button>
+    </div>
+
+  </form>
+
+</section>

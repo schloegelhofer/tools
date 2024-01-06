@@ -1,5 +1,82 @@
-body
-{
+/* Set the overall height of the page to 100% */
+body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+h2{
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.router-outlet-container {
+  grid-row: 2; /* Platziere das router-outlet in der zweiten Zeile */
+}
+
+.headerAndFooter{
+  background-color: #525252;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 5em;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: 	#FF8C00;
+  color: #fff;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1.5px solid rgb(244, 71, 71);
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+ul li{
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
 }

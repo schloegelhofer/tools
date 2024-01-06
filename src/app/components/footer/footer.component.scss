@@ -1,43 +1,45 @@
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+/* Additional styling specific to the footer component */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 0.5em;
 
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-
-    .footer-section {
-      h2 {
-        font-size: 1.5em;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        li {
-          margin-bottom: 8px;
-          a {
-            color: #fff;
-            text-decoration: none;
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
+  a {
+    text-decoration: none;
+    color: #ecf0f1;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  a:hover{
+    color: black;
+    text-decoration: underline;
   }
 
-  .footer-bottom {
+}
+.copy{
+  color: #ecf0f1;
+}
+
+/* Example: Styling for social media icons */
+.footer-content i {
+  color: #ecf0f1; /* Helle Grauweiß */
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.footer-content i:hover {
+  color: #2c3e50; /* Dunkles Blau */
+}
+
+
+footer {
+  p {
     text-align: center;
-    padding-top: 10px;
-    background-color: #222;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    p {
-      margin: 0;
-    }
+  }
+  .copy{
+    text-align: center;
+    padding: 0.5em;
   }
 }
