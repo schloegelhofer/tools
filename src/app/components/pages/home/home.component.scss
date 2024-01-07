@@ -9,3 +9,13 @@
 .buttonHomePage {
   margin-right: 30em;
 }
+
+.homeList{
+  border: 2px solid black;
+  border-radius: 12px;
+  max-width: max-content;
+  li{
+    list-style-type: circle;
+    margin: 1em;
+  }
+}
