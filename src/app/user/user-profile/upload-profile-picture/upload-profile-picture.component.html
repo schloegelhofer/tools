@@ -1,0 +1,12 @@
+<div class="upload-flex">
+  Profilbild ändern
+
+  <i class="material-icons" routerLink="/userProfile">account_circle</i>
+  <form class="upload-form">
+
+    <input type="file" (change)="onFileSelected($event)">
+    <button (click)="uploadProfilePicture()">Profilbild hochladen</button>
+    <img *ngIf="selectedFile" [src]="selectedFileUrl" alt="Vorschau des ausgewählten Bildes">
+  </form>
+</div>
+

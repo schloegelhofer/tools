@@ -1,0 +1,15 @@
+.profile-form {
+  width: 50vw;
+  height: 50vh;
+  margin-top: 0;
+  border: none;
+  box-shadow: none;
+}
+.profile-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 5em;
+  margin-right: 5em;
+}

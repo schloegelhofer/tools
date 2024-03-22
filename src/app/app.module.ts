@@ -5,12 +5,15 @@ import { AppComponent } from './app.component';
 import { DataServiceService } from './services/data-service.service';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { UserloginComponent } from './components/userlogin/userlogin.component';
-import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { UserloginComponent } from './user/user-login/userlogin.component';
+import { UserRegistrationComponent } from './user/user-registration/user-registration.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FeedComponent } from './components/pages/feed/feed.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { UploadProfilePictureComponent } from './user/user-profile/upload-profile-picture/upload-profile-picture.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { FeedComponent } from './components/pages/feed/feed.component';
     UserloginComponent,
     UserRegistrationComponent,
     HomeComponent,
-    FeedComponent
+    FeedComponent,
+    UserProfileComponent,
+    UploadProfilePictureComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     DataServiceService
