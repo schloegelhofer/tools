@@ -1,10 +1,36 @@
-<header>
-  <h2>TOOLS</h2>
-  <nav>
-    <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/contact">Kontakt</a></li>
-      <i class="material-icons" routerLink="/userProfile">account_circle</i>
+<header class="header">
+  <h2 class="logo">TOOLS</h2>
+
+  <nav aria-label="Hauptnavigation">
+    <ul class="nav-list">
+        <li *ngIf="!isLoggedIn" class="nav-item-right">
+        <a routerLink="/" aria-label="Zum Profil">
+          <span class="material-icons" aria-hidden="true">account_circle</span>
+        </a>
+      </li>
+
+      <!-- Eingeloggt: Dropdown -->
+      <li *ngIf="isLoggedIn" class="nav-item-right">
+        <button
+          type="button"
+          class="profile-trigger"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="menuOpen"
+          aria-haspopup="menu"
+          aria-label="Profilmenü öffnen"
+        >
+          <span class="material-icons" aria-hidden="true">account_circle</span>
+        </button>
+
+        <div class="dropdown" *ngIf="menuOpen" role="menu">
+          <p class="dropdown-name">
+            Hallo {{ userName }}
+          </p>
+
+          <a class="dropdown-item" (click)="goToProfile()">Profil</a>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+        </div>
+      </li>
     </ul>
   </nav>
 </header>

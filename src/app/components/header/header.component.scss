@@ -29,3 +29,62 @@ nav a:hover {
   color: rgb(174, 172, 172);
   cursor: pointer;
 }
+
+.nav-list{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-item-right{
+  margin-left: auto;
+  position: relative; /* wichtig für dropdown */
+}
+
+.profile-trigger{
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Dropdown-Container */
+.dropdown{
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 16px;      /* ✅ insgesamt kleiner */
+  backdrop-filter: blur(6px);
+}
+
+/* Name im Dropdown */
+.dropdown-name{
+  margin: 0 0 8px 0;
+  font-size: 13px;      /* ✅ noch etwas kleiner */
+  font-weight: 600;
+}
+
+/* Dropdown-Items (a oder li>a) */
+.dropdown-item{
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px;      /* ✅ kleinere Schrift */
+  color: #222 !important;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.dropdown-item:hover{
+  background: rgba(0,0,0,0.05);
+}
