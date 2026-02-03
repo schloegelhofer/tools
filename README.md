@@ -1,4 +1,5 @@
 # Tools
+Angular Frontend-Projekt für eine Plattform zum Verleihen und Ausleihen von Werkzeugen.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
