@@ -2,7 +2,7 @@
 
   <button routerLink="/">Zurück</button>
 
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <h3>Registrieren</h3>
 
     <div>
@@ -16,6 +16,11 @@
     </div>
 
     <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+
+    <div>
       <label for="password">Passwort:</label>
       <input type="password" id="password" formControlName="password">
     </div>
@@ -26,7 +31,7 @@
     </div>
 
     <div class="buttons">
-      <button type="submit" [disabled]="form.invalid">Registrieren</button>
+      <button type="submit" [disabled]="registrationForm.invalid">Registrieren</button>
       <button type="reset" (click)="reset()" >Reset</button>
     </div>
 

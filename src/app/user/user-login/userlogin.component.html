@@ -6,8 +6,13 @@
     <h3>Login</h3>
 
     <div>
-      <label for="username">Benutzername:</label>
-      <input type="text" id="username" formControlName="username">
+      <label for="firstName">Vorname:</label>
+      <input type="text" id="firstName" formControlName="firstName">
+    </div>
+
+    <div>
+      <label for="lastName">Nachname:</label>
+      <input type="text" id="lastName" formControlName="lastName">
     </div>
 
     <div>
@@ -16,7 +21,7 @@
     </div>
 
     <div class="buttons">
-      <button type="submit" [disabled]="form.invalid" routerLink="/userName">Einloggen</button>
+      <button type="submit" [disabled]="form.invalid">Einloggen</button>
       <button type="reset" (click)="reset()">Reset</button>
     </div>
 

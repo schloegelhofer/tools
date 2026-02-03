@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
 
 export interface User {
   name: string;
@@ -13,29 +15,35 @@ export interface User {
 })
 export class UserRegistrationComponent {
 
-  form: FormGroup;
+  registrationForm: FormGroup;
 
-    constructor() {
-      this.form = new FormGroup({
-        firstName: new FormControl('', [Validators.required]),
-        lastName: new FormControl('', [Validators.required]),
-        password: new FormControl('', [Validators.required]),
-        passwordConfirm: new FormControl('', [Validators.required]),
-      });
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  ) {
+    this.registrationForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      passwordConfirm: ['', Validators.required]
+    });
+  }
+
+  onSubmit(): void {
+    if (this.registrationForm.valid) {
+      this.userService.registerUser(this.registrationForm.value).subscribe(
+        (response) => {
+          console.log('Benutzer erfolgreich registriert:', response);
+        },
+        (error) => {
+          console.error('Fehler bei der Registrierung:', error);
+        }
+      );
     }
+  }
 
-    ngOnInit(): void {
-
-    }
-
-
-    onSubmit(){
-      console.log("Formular wurde ausgefüllt");
-
-    }
-
-    reset(){
-      this.form.reset;
-    }
-
+  reset() {
+    this.registrationForm.reset();
+  }
 }
