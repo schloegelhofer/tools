@@ -3,6 +3,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 h2{
@@ -31,14 +32,13 @@ header {
 
 form {
   max-width: 400px;
-  margin: auto;
-  margin-top: 5em;
+  margin: auto;          /* bleibt */
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  align-self: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 
 label {
   display: block;

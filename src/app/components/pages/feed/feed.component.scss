@@ -3,21 +3,14 @@
   flex-direction: row;
   justify-content: center; /* Horizontale Zentrierung */
   align-items: center; /* Vertikale Zentrierung */
-  height: 80vh;
   max-width: 90vw;
   margin: auto;
   .container {
     border: 2px solid black;
     border-radius: 12px;
-    width: 30vw;
-    height: fit-content;
     padding: 1em;
     margin: 2em;
     justify-content: center;
-
-    .user-feed-containers{
-      height: min-content;
-    }
     .user-card-headline {
       display: flex;
       flex-direction: row;
